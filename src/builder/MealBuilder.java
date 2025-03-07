@@ -1,3 +1,7 @@
+package builder;
+
+import model.*;
+
 import java.util.Random;
 
 public class MealBuilder {

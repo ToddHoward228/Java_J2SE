@@ -1,3 +1,5 @@
+package model;
+
 public interface Item {
     String getName();
     Packing getPacking();

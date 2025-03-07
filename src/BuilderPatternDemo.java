@@ -1,3 +1,6 @@
+import builder.MealBuilder;
+import model.Meal;
+
 public class BuilderPatternDemo {
 
 

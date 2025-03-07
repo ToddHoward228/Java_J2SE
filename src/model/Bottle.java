@@ -1,6 +1,8 @@
-public class Wrapper implements Packing {
+package model;
+
+public class Bottle implements Packing{
     String description;
-    public Wrapper(String description) {
+    public Bottle(String description) {
         this.description = description;
     }
     public String getDescription() {

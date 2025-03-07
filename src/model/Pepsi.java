@@ -1,6 +1,8 @@
-public class Coke extends ColdDrink {
-    private float price = 35.5f;
-    private String name = "Coka Cola";
+package model;
+
+public class Pepsi extends ColdDrink{
+    private float price = 30.5f;
+    private String name = "model.Pepsi";
 
     @Override
     public String getName() {

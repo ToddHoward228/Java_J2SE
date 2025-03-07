@@ -1,6 +1,8 @@
-public class VegBurger extends Burger {
-    private float price = 67.3f;
-    private String name = "Veg Burger";
+package model;
+
+public class Coke extends ColdDrink {
+    private float price = 35.5f;
+    private String name = "Coka Cola";
 
     @Override
     public String getName() {
