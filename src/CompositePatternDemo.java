@@ -30,6 +30,7 @@ public class CompositePatternDemo {
         mgr4.addSub(new Employee("Grace Morgan", "Sales2", 14890));
         mgr4.addSub(new Employee("Elijah Foster", "Sales2", 12000));
 
+        Employee.RecursiveShow(root);
 
     }
 }
