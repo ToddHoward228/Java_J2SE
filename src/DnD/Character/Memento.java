@@ -2,13 +2,13 @@ package DnD.Character;
 
 public class Memento {
 
-    private String state;
+    private int[] state;
 
-    public Memento(String state) {
+    public Memento(int[] state) {
         this.state = state;
     }
 
-    public String getState() {
+    public int[] getState() {
         return state;
     }
 }
