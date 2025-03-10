@@ -15,8 +15,6 @@ public class Main {
         mainHeroCareTaker.add(stats.saveStateToMemento());
 
 
-
-
         Character mainHero = new Character("Aeredil", "Drow", "male", "Haotig-Good", "Fighter", stats);
 
     }
