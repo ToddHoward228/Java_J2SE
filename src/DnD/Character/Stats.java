@@ -5,11 +5,10 @@ import DnD.Dice;
 public class Stats {
 
     public Stats() {
-        stats = new int[6];
         generate();
     }
 
-    int[] stats;
+    String stats;
     int strength;
     int dexterity;
     int constitution;
@@ -17,29 +16,31 @@ public class Stats {
     int wisdom;
     int charisma;
 
-    public int[] getStats() {
-        return stats;
-    }
 
     public Stats generate() {
-
-        for (int i = 0; i < 6; i++) {
-            stats[i] = Dice.rollStat();
-        }
+        strength = Dice.rollStat();
+        dexterity = Dice.rollStat();
+        constitution = Dice.rollStat();
+        intelligence = Dice.rollStat();
+        wisdom = Dice.rollStat();
+        charisma = Dice.rollStat();
 
         return this;
     }
 
     public Memento saveStateToMemento() {
-        return new Memento(stats);
+        return new Memento(String.format("str:%d;str|dex:%d;dex|con:%d;con|int:%d;int|wis:%d;wis|chr:%d;chr",
+                strength, dexterity, constitution, intelligence, wisdom, charisma));
     }
 
-    public void getStateFromMemento(int[] mem) {
-        stats = mem;
-    }
+    public void getStateFromMemento(String mem) {
 
-    public void distribution(){
-
+        strength = Integer.parseInt(mem.substring(mem.indexOf("str:") + 4, mem.indexOf(";str")));
+        dexterity = Integer.parseInt(mem.substring(mem.indexOf("dex:") + 4, mem.indexOf(";dex")));
+        constitution = Integer.parseInt(mem.substring(mem.indexOf("con:") + 4, mem.indexOf(";con")));
+        intelligence = Integer.parseInt(mem.substring(mem.indexOf("int:") + 4, mem.indexOf(";int")));
+        wisdom = Integer.parseInt(mem.substring(mem.indexOf("wis:") + 4, mem.indexOf(";wis")));
+        charisma = Integer.parseInt(mem.substring(mem.indexOf("chr:") + 4, mem.indexOf(";chr")));
     }
 
     public void print() {
