@@ -1,6 +1,8 @@
 public class Rectangle extends Shape {
-    private double area;
-    private double perimeter;
+    public int width;
+    public int height;
+    public int x;
+    public int y;
 
     public Rectangle() {
         type = "Rectangle";

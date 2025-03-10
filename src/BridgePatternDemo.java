@@ -1,5 +1,5 @@
 
-public class PrototypePatternDemo {
+public class BridgePatternDemo {
     public static void main(String[] args) {
 
         ShapeCache shapeCache = new ShapeCache();

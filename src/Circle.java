@@ -1,5 +1,7 @@
 public class Circle extends Shape {
-    private double radius;
+    public int radius;
+    public int x;
+    public int y;
 
     public Circle() {
         type = "Circle";
