@@ -1,10 +1,16 @@
 public class Circle extends Shape {
-    public int radius;
-    public int x;
-    public int y;
+    private int radius;
+    private int x;
+    private int y;
 
-    public Circle() {
-        type = "Circle";
+    public Circle(int x, int y, int radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
     }
 
+    @Override
+    public String draw() {
+        return String.format("x = %d, y = %d, Radius = %d", x, y, radius);
+    }
 }

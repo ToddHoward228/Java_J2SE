@@ -2,25 +2,16 @@
 public class BridgePatternDemo {
     public static void main(String[] args) {
 
-        ShapeCache shapeCache = new ShapeCache();
-        shapeCache.loadCache();
+        Circle circle = new Circle(7, 8, 9);
+        Rectangle rectangle = new Rectangle(4, 5, 6, 7);
 
-        Shape c1 = shapeCache.getShape("c000");
-        System.out.println("\tCircle 1\nID: " + c1.getId() + ", type: " + c1.getType());
+        RedPen redPen = new RedPen();
+        GreenPen greenPen = new GreenPen();
 
-        Shape c2 = shapeCache.getShape("c001");
-        System.out.println("\tCircle 2\nID: " + c2.getId() + ", type: " + c2.getType());
+        redPen.drawCircle(circle.draw());
+        greenPen.drawCircle(circle.draw());
 
-        Shape r1 = shapeCache.getShape("r000");
-        System.out.println("\tRectangle 1\nID: " + r1.getId() + ", type: " + r1.getType());
+        redPen.drawRectangle(rectangle.draw());
 
-        Shape r2 = shapeCache.getShape("r001");
-        System.out.println("\tRectangle 2\nID: " + r2.getId() + ", type: " + r2.getType());
-
-        Shape s1 = shapeCache.getShape("s000");
-        System.out.println("\tSquare 1\nID: " + s1.getId() + ", type: " + s1.getType());
-
-        Shape s2 = shapeCache.getShape("s001");
-        System.out.println("\tSquare 2\nID: " + s2.getId() + ", type: " + s2.getType());
     }
 }
