@@ -1,6 +1,8 @@
+package Facade;
+
 import java.util.HashMap;
 
-public class ShapeCache {
+class ShapeCache {
 
     HashMap<String, Shape> shapeMap;
 

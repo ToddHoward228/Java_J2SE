@@ -1,8 +1,10 @@
-public class Rectangle extends Shape {
+package Facade;
+
+class Rectangle extends Shape {
     private double area;
     private double perimeter;
 
-    public Rectangle() {
+    Rectangle() {
         type = "Rectangle";
     }
 }

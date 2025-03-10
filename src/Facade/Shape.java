@@ -1,17 +1,19 @@
+package Facade;
+
 abstract public class Shape implements Cloneable {
-    protected String id;
-    public String type;
+    String id;
+    String type;
 
 
-    public String getId() {
+    String getId() {
         return id;
     }
 
-    public String getType() {
+    String getType() {
         return type;
     }
 
-    public void setId(String id) {
+    void setId(String id) {
         this.id = id;
     }
     @Override
