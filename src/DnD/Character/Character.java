@@ -18,4 +18,14 @@ public class Character {
         this.attributes = attributes;
     }
 
+    public void printSheet() {
+        System.out.println("Character Information:");
+        System.out.println("Name      : " + name);
+        System.out.println("Race      : " + race);
+        System.out.println("Gender    : " + gender);
+        System.out.println("Alignment : " + alignment);
+        System.out.println("Class     : " + className);
+        attributes.print();
+    }
+
 }

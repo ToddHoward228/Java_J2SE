@@ -7,15 +7,21 @@ public class Main {
     public static void main(String[] args) {
 
         Stats stats = new Stats();
-
-        stats.print();
-
         CareTaker mainHeroCareTaker = new CareTaker();
 
+        Character mainHero = new Character("Aeredil", "Drow", "male", "Haotig-Good", "Fighter", stats);
+
+        stats.print();
         mainHeroCareTaker.add(stats.saveStateToMemento());
 
+        stats.generate();
+        stats.print();
 
-        Character mainHero = new Character("Aeredil", "Drow", "male", "Haotig-Good", "Fighter", stats);
+        mainHeroCareTaker.add(stats.saveStateToMemento());
+        stats.getStateFromMemento(mainHeroCareTaker.get(0));
+
+        System.out.println("Повернуто перше значення");
+        mainHero.printSheet();
 
     }
 }

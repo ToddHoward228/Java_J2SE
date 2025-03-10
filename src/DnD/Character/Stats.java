@@ -31,7 +31,7 @@ public class Stats {
 
 
         for (int i = 0; i < 6; i++) {
-            System.out.println("Your values for distribution\n");
+            System.out.println("\tYour values for distribution");
             for (int j = 0; j < values.size(); j++)
                 System.out.print("[#" + j + "-(" + values.get(j) + ")]");
 
@@ -71,17 +71,20 @@ public class Stats {
                 strength, dexterity, constitution, intelligence, wisdom, charisma));
     }
 
-    public void getStateFromMemento(String mem) {
+    public void getStateFromMemento(Memento memento) {
 
-        strength = Integer.parseInt(mem.substring(mem.indexOf("str:") + 4, mem.indexOf(";str")));
-        dexterity = Integer.parseInt(mem.substring(mem.indexOf("dex:") + 4, mem.indexOf(";dex")));
-        constitution = Integer.parseInt(mem.substring(mem.indexOf("con:") + 4, mem.indexOf(";con")));
-        intelligence = Integer.parseInt(mem.substring(mem.indexOf("int:") + 4, mem.indexOf(";int")));
-        wisdom = Integer.parseInt(mem.substring(mem.indexOf("wis:") + 4, mem.indexOf(";wis")));
-        charisma = Integer.parseInt(mem.substring(mem.indexOf("chr:") + 4, mem.indexOf(";chr")));
+        String memory = memento.getState();
+
+        strength = Integer.parseInt(memory.substring(memory.indexOf("str:") + 4, memory.indexOf(";str")));
+        dexterity = Integer.parseInt(memory.substring(memory.indexOf("dex:") + 4, memory.indexOf(";dex")));
+        constitution = Integer.parseInt(memory.substring(memory.indexOf("con:") + 4, memory.indexOf(";con")));
+        intelligence = Integer.parseInt(memory.substring(memory.indexOf("int:") + 4, memory.indexOf(";int")));
+        wisdom = Integer.parseInt(memory.substring(memory.indexOf("wis:") + 4, memory.indexOf(";wis")));
+        charisma = Integer.parseInt(memory.substring(memory.indexOf("chr:") + 4, memory.indexOf(";chr")));
     }
 
     public void print() {
+        System.out.println("\n\tYour stats");
         System.out.println("Strength: " + strength);
         System.out.println("Dexterity: " + dexterity);
         System.out.println("Constitution: " + constitution);
