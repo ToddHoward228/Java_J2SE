@@ -1,12 +1,15 @@
 package DnD.Character;
 
 
+import DnD.Character.Class.CharacterClass;
+import DnD.Character.Class.ClassFactory;
+
 public class Character {
     String name;
     String race;
     String gender;
     String alignment;
-    String className;
+    CharacterClass characterClass;
     Stats attributes;
 
     public Character(String name, String race, String gender, String alignment, String className, Stats attributes) {
@@ -14,8 +17,8 @@ public class Character {
         this.race = race;
         this.gender = gender;
         this.alignment = alignment;
-        this.className = className;
         this.attributes = attributes;
+        this.characterClass = new ClassFactory().getClass(className);
     }
 
     public void printSheet() {
@@ -24,8 +27,12 @@ public class Character {
         System.out.println("Race      : " + race);
         System.out.println("Gender    : " + gender);
         System.out.println("Alignment : " + alignment);
-        System.out.println("Class     : " + className);
+        System.out.println("Class     : " + characterClass.getClassName());
         attributes.print();
+    }
+
+    public void printFeatures() {
+        characterClass.
     }
 
 }

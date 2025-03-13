@@ -24,7 +24,7 @@ public class Stats {
         ArrayList<Integer> values = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         int index;
-        final String[] ATTRIBUTE = {"STRENGTH", "DEXTERITY", "CONSTITUTION", "INTELLIGENCE", "WISDOM", "CHARISMA"};
+        final String[] ABILITY = {"STRENGTH", "DEXTERITY", "CONSTITUTION", "INTELLIGENCE", "WISDOM", "CHARISMA"};
 
         for (int i = 0; i < 6; i++)
             values.add(Dice.rollStat());
@@ -36,11 +36,11 @@ public class Stats {
                 System.out.print("[#" + j + "-(" + values.get(j) + ")]");
 
             do {
-                System.out.print("\nEnter index of attribute for " + ATTRIBUTE[i] + ": ");
+                System.out.print("\nEnter index of attribute for " + ABILITY[i] + ": ");
                 index = sc.nextInt();
             } while (index < 0 || index >= values.size());
 
-            switch (ATTRIBUTE[i]) {
+            switch (ABILITY[i]) {
                 case "STRENGTH":
                     strength = values.get(index);
                     break;
@@ -64,6 +64,21 @@ public class Stats {
         }
 
         return this;
+    }
+
+    public String saveStateToMemento() {
+        return String.format("str:%d;str|dex:%d;dex|con:%d;con|int:%d;int|wis:%d;wis|chr:%d;chr",
+                strength, dexterity, constitution, intelligence, wisdom, charisma);
+    }
+
+    public void getStateFromMemento(String memento) {
+
+        strength = Integer.parseInt(memento.substring(memento.indexOf("str:") + 4, memento.indexOf(";str")));
+        dexterity = Integer.parseInt(memento.substring(memento.indexOf("dex:") + 4, memento.indexOf(";dex")));
+        constitution = Integer.parseInt(memento.substring(memento.indexOf("con:") + 4, memento.indexOf(";con")));
+        intelligence = Integer.parseInt(memento.substring(memento.indexOf("int:") + 4, memento.indexOf(";int")));
+        wisdom = Integer.parseInt(memento.substring(memento.indexOf("wis:") + 4, memento.indexOf(";wis")));
+        charisma = Integer.parseInt(memento.substring(memento.indexOf("chr:") + 4, memento.indexOf(";chr")));
     }
 
     public void print() {

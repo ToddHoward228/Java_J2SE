@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CareTaker {
-    List<Memento> mementoList;
+    List<String> mementoList;
 
-    public void add(Memento m) {
+    public void add(String m) {
         if (mementoList == null) {
             mementoList = new ArrayList<>();
         }
         mementoList.add(m);
     }
 
-    public Memento undo() {
+    public String undo() {
         return mementoList.removeLast();
     }
 
