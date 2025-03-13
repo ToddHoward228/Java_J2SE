@@ -2,8 +2,6 @@ package builder;
 
 import model.*;
 
-import java.util.Random;
-
 public class MealBuilder {
 
     private static MealBuilder mealBuilder;
@@ -17,27 +15,26 @@ public class MealBuilder {
         return mealBuilder;
     }
 
-    Random rand = new Random();
 
-    public Meal prepareVegMeal() {
+    public Meal prepareVegMeal(String coldDrink) {
         Meal meal = new Meal();
         meal.addItem(new VegBurger());
 
-        if(rand.nextBoolean())
+        if(coldDrink.equals("Pepsi"))
             meal.addItem(new Pepsi());
-        else
+        else if (coldDrink.equals("Coke"))
             meal.addItem(new Coke());
 
         return meal;
     }
 
-    public Meal prepareNonVegMeal() {
+    public Meal prepareNonVegMeal(String coldDrink) {
         Meal meal = new Meal();
         meal.addItem(new ChickenBurger());
 
-        if(rand.nextBoolean())
+        if(coldDrink.equals("Pepsi"))
             meal.addItem(new Pepsi());
-        else
+        else if (coldDrink.equals("Coke"))
             meal.addItem(new Coke());
 
         return meal;

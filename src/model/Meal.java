@@ -17,7 +17,7 @@ public class Meal {
     }
     public void showItems(){
         for(Item item : items){
-            System.out.println("Name: " + item.getName() + "\nmodel.Packing: " + item.getPacking().getDescription() + "\nPrice: " + item.getPrice());
+            System.out.println("Name: " + item.getName() + "\nPacking: " + item.getPacking().getDescription() + "\nPrice: " + item.getPrice());
         }
     }
 }

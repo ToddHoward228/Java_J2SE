@@ -2,7 +2,7 @@ package model;
 
 public class VegBurger extends Burger {
     private float price = 67.3f;
-    private String name = "Veg model.Burger";
+    private String name = "Veg Burger";
 
     @Override
     public String getName() {
