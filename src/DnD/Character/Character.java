@@ -11,6 +11,8 @@ public class Character {
     String alignment;
     CharacterClass characterClass;
     Stats attributes;
+    int hp;
+    int level = 1;
 
     public Character(String name, String race, String gender, String alignment, String className, Stats attributes) {
         this.name = name;
@@ -19,6 +21,8 @@ public class Character {
         this.alignment = alignment;
         this.attributes = attributes;
         this.characterClass = new ClassFactory().getClass(className);
+
+        setHp();
     }
 
     public void printSheet() {
@@ -28,11 +32,20 @@ public class Character {
         System.out.println("Gender    : " + gender);
         System.out.println("Alignment : " + alignment);
         System.out.println("Class     : " + characterClass.getClassName());
+        System.out.println("HP        : " + hp);
         attributes.print();
+
+        printFeatures();
     }
 
     public void printFeatures() {
-        characterClass.
+        for(Features feature : characterClass.getFeatures()){
+            System.out.println(feature.GetName() + " : " + feature.GetDescription());
+
+        }
     }
 
+    void setHp() {
+        hp = characterClass.getHp() * level;
+    }
 }
