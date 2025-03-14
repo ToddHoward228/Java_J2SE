@@ -1,4 +1,4 @@
-package DnD.Character.Class;
+package DnD.Character;
 
 public class ClassFactory {
     public CharacterClass getClass(String className) {

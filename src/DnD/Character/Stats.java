@@ -7,11 +7,6 @@ import java.util.Scanner;
 
 public class Stats {
 
-    public Stats() {
-        generate();
-    }
-
-    String stats;
     int strength;
     int dexterity;
     int constitution;
@@ -19,16 +14,56 @@ public class Stats {
     int wisdom;
     int charisma;
 
+    public Stats() {
+        generate();
+    }
 
-    public Stats generate() {
+    public Stats(int str, int dex, int cons, int inte, int wis, int charis) {
+        generate(str, dex, cons, inte, wis, charis);
+    }
+
+    public void generate() {
         ArrayList<Integer> values = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
-        int index;
-        final String[] ABILITY = {"STRENGTH", "DEXTERITY", "CONSTITUTION", "INTELLIGENCE", "WISDOM", "CHARISMA"};
 
         for (int i = 0; i < 6; i++)
             values.add(Dice.rollStat());
 
+        choseStats(values);
+    }
+
+    public void generate(int str, int dex, int cons, int inte, int wis, int charis) {
+        strength = str;
+        dexterity = dex;
+        constitution = cons;
+        intelligence = inte;
+        wisdom = wis;
+        charisma = charis;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+    public int getDexterity() {
+        return dexterity;
+    }
+    public int getConstitution() {
+        return constitution;
+    }
+    public int getIntelligence() {
+        return intelligence;
+    }
+    public int getWisdom() {
+        return wisdom;
+    }
+    public int getCharisma() {
+        return charisma;
+    }
+
+
+    public void choseStats(ArrayList<Integer> values){
+        Scanner sc = new Scanner(System.in);
+        int index;
+        final String[] ABILITY = {"STRENGTH", "DEXTERITY", "CONSTITUTION", "INTELLIGENCE", "WISDOM", "CHARISMA"};
 
         for (int i = 0; i < 6; i++) {
             System.out.println("\tYour values for distribution");
@@ -62,8 +97,6 @@ public class Stats {
             }
             values.remove(index);
         }
-
-        return this;
     }
 
     public String saveStateToMemento() {
