@@ -1,4 +1,6 @@
-package DnD.Character;
+package DnD.Character.Class;
+
+import DnD.Character.Spell;
 
 public class Sorcerer extends CharacterClass {
     Sorcerer() {

@@ -8,7 +8,14 @@ abstract public class CharacterRace {
     String description;
     ArrayList<Features> raceFeatures;
 
-    CharacterRace() { raceFeatures = new ArrayList<>(); }
+    CharacterRace() {
+        raceFeatures = new ArrayList<>();
+        bonuses = new Stats(0, 0, 0, 0, 0, 0);
+    }
+
+    public void saySMTH() {
+        System.out.println("Hello");
+    }
 
     public String getName() {
         return name;

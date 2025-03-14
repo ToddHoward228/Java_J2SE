@@ -115,7 +115,6 @@ public class Stats {
     }
 
     public void print() {
-        System.out.println("\n\tYour stats");
         System.out.println("Strength: " + strength);
         System.out.println("Dexterity: " + dexterity);
         System.out.println("Constitution: " + constitution);

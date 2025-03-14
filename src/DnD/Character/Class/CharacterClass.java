@@ -1,4 +1,6 @@
-package DnD.Character;
+package DnD.Character.Class;
+
+import DnD.Character.Features;
 
 import java.util.ArrayList;
 

@@ -6,18 +6,26 @@ import DnD.Character.Character;
 public class Main {
     public static void main(String[] args) {
 
+        RaceAbstractFactory factory = new DwarfMountainFighterFactory();
 
-        Character mainHero = new Character("Aeredil", "Drow", "male", "Chaotic-Good", "Fighter", new Stats());
+        Character dwarfGuardian1 = factory.create();
+        Character dwarfGuardian2 = factory.create();
 
-        System.out.println("Повернуто перше значення");
-        mainHero.printSheet();
-        mainHero.printFeatures();
+        dwarfGuardian1.printSheet();
 
+        dwarfGuardian2.printSheet();
 
-        Character stranger = new Character("Oldric", "Human", "male", "True-Neutral", "Sorcerer", new Stats());
+        System.out.println("\nDwarf Guardian 1 says:");
+        dwarfGuardian1.getCharacterRace().saySMTH();
 
-        System.out.println("Повернуто перше значення");
-        stranger.printSheet();
-        stranger.printFeatures();
+        factory = new WoodElfSorcererFactory();
+
+        Character elvenStranger = factory.create();
+
+        elvenStranger.printSheet();
+
+        System.out.println("\nElven Stranger says:");
+        elvenStranger.getCharacterRace().saySMTH();
+
     }
 }

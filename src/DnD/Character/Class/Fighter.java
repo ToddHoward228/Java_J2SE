@@ -1,4 +1,6 @@
-package DnD.Character;
+package DnD.Character.Class;
+
+import DnD.Character.Perk;
 
 public class Fighter extends CharacterClass {
     Fighter() {
