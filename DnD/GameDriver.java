@@ -5,6 +5,9 @@ public class GameDriver {
 
         View view = new View();
 
+        Controller controller = new Controller(view);
+
         view.Show();
+
     }
 }

@@ -1,12 +1,12 @@
 package DnD.Model;
 
-import DnD.DiceVar;
+import DnD.DX;
 
 public class ClassSorcerer extends CharacterClass {
     public ClassSorcerer() {
         name = "Sorcerer";
 
-        hitPointDie = DiceVar.D6;
+        hitPointDie = DX.D6;
 
         classFeatures.add(new FeatureSpell("Meteor", "A devastating 9th-level evocation spell that summons four " +
                 "blazing meteors, each exploding on impact. Deals massive fire and bludgeoning damage over a wide " +

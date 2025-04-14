@@ -1,13 +1,13 @@
 package DnD.Model;
 
-import DnD.DiceVar;
+import DnD.DX;
 
 import java.util.ArrayList;
 import java.util.Objects;
 
 abstract public class CharacterClass {
     String name;
-    DiceVar hitPointDie;
+    DX hitPointDie;
     ArrayList<IFeature> classFeatures;
 
     public CharacterClass() {
@@ -18,7 +18,7 @@ abstract public class CharacterClass {
         return name;
     }
 
-    public DiceVar getHitPointDie() {
+    public DX getHitPointDie() {
         return hitPointDie;
     }
 

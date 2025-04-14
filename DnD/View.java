@@ -8,22 +8,17 @@ public class View {
     private JPanel panel;
     private JPanel charAttributesPanel;
 
-    JTextField charNameBox;
-    JComboBox charGenderBox;
-    JComboBox charAlignmentBox;
-    JComboBox charClassBox;
-    JComboBox charRaceBox;
+    private JTextField charNameBox;
+    private JComboBox charGenderBox;
+    private JComboBox charAlignmentBox;
+    private JComboBox charClassBox;
+    private JComboBox charRaceBox;
 
-    JComboBox strengthBox;
-    JComboBox dexterityBox;
-    JComboBox constitutionBox;
-    JComboBox intelligenceBox;
-    JComboBox wisdomBox;
-    JComboBox charismaBox;
+    JComboBox<String>[] attributesBoxes = new JComboBox[6];
 
-    JButton undoStatsButton;
-    JButton generateButton;
-    JButton acceptButton;
+    private JButton undoStatsButton;
+    private JButton generateButton;
+    private JButton acceptButton;
 
     private GridBagConstraints gbc;
     private GridBagConstraints gbcStats;
@@ -34,6 +29,7 @@ public class View {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
 
+        // Panel
         panel = new JPanel();
         frame.add(panel);
         panel.setBackground(new Color(53, 56, 66));
@@ -45,30 +41,34 @@ public class View {
         gbc.gridwidth = 1;
         gbc.fill = GridBagConstraints.BOTH;
 
-
+        // Name
         charNameBox = new JTextField(10);
         addUIComponent(charNameBox,"Enter character name", panel, gbc, 0);
 
+        // Gender
         String [] items = {"Male", "Female"};
         charGenderBox = new JComboBox(items);
         addUIComponent(charGenderBox,"Enter character name", panel, gbc, 1);
 
-
+        // Alignment
         items = new String[]{
         "Lawful Good", "Lawful Neutral", "Lawful Evil",
         "Neutral Good", "Neutral Neutral", "Neutral Evil",
-        "Chaotic Good", "Chaotic Neutral", "Chaotic Neutral"};
+        "Chaotic Good", "Chaotic Neutral", "Chaotic Evil"};
         charAlignmentBox = new JComboBox(items);
         addUIComponent(charAlignmentBox,"Chose character alignment", panel, gbc, 2);
 
+        // Race
         items = new String[]{"Wood Elf", "Mountain Dwarf"};
         charRaceBox = new JComboBox(items);
         addUIComponent(charRaceBox,"Chose character race", panel, gbc, 3);
 
+        // Class
         items = new String[]{"Fighter", "Sourcerer"};
         charClassBox = new JComboBox(items);
         addUIComponent(charClassBox,"Chose character class", panel, gbc, 4);
 
+        // Stats
         JLabel statsLabel = new JLabel("Stats");
         statsLabel.setForeground(Color.WHITE);
 
@@ -93,28 +93,22 @@ public class View {
         gbcStats.fill = GridBagConstraints.BOTH;
         gbcStats.weightx = 1.0;
 
-        strengthBox = new JComboBox();
-        dexterityBox = new JComboBox();
-        constitutionBox = new JComboBox();
-        intelligenceBox = new JComboBox();
-        wisdomBox = new JComboBox();
-        charismaBox = new JComboBox();
+        for (int i = 0; i < 6; i++) {
+            attributesBoxes[i] = new JComboBox();
+            attributesBoxes[i].addItem("-");
+        }
 
-        strengthBox.setEditable(false);
-        dexterityBox.setEditable(false);
-        constitutionBox.setEditable(false);
-        intelligenceBox.setEditable(false);
-        wisdomBox.setEditable(false);
-        charismaBox.setEditable(false);
+        addUIComponent(attributesBoxes[0], "Strength", charAttributesPanel, gbcStats, 0);
+        addUIComponent(attributesBoxes[1], "Dexterity", charAttributesPanel, gbcStats, 1);
+        addUIComponent(attributesBoxes[2], "Constitution", charAttributesPanel, gbcStats, 2);
+        addUIComponent(attributesBoxes[3], "Intelligence", charAttributesPanel, gbcStats, 3);
+        addUIComponent(attributesBoxes[4], "Wisdom", charAttributesPanel, gbcStats, 4);
+        addUIComponent(attributesBoxes[5], "Charisma", charAttributesPanel, gbcStats, 5);
+
+        // Buttons
         generateButton = new JButton("Generate");
         undoStatsButton = new JButton("Undo");
-
-        addUIComponent(strengthBox, "Strength", charAttributesPanel, gbcStats, 0);
-        addUIComponent(dexterityBox, "Dexterity", charAttributesPanel, gbcStats, 1);
-        addUIComponent(constitutionBox, "Constitution", charAttributesPanel, gbcStats, 2);
-        addUIComponent(intelligenceBox, "Intelligence", charAttributesPanel, gbcStats, 3);
-        addUIComponent(wisdomBox, "Wisdom", charAttributesPanel, gbcStats, 4);
-        addUIComponent(charismaBox, "Charisma", charAttributesPanel, gbcStats, 5);
+        undoStatsButton.setEnabled(false);
 
         gbcStats.gridy = 7;
         gbcStats.gridx = 0;
@@ -126,6 +120,38 @@ public class View {
 
         gbc.gridy = 7;
         panel.add(acceptButton, gbc);
+    }
+
+    public JTextField getCharNameBox() {
+        return charNameBox;
+    }
+
+    public JComboBox getCharGenderBox() {
+        return charGenderBox;
+    }
+
+    public JComboBox getCharAlignmentBox() {
+        return charAlignmentBox;
+    }
+
+    public JComboBox getCharClassBox() {
+        return charClassBox;
+    }
+
+    public JComboBox getCharRaceBox() {
+        return charRaceBox;
+    }
+
+    public JButton getUndoStatsButton() {
+        return undoStatsButton;
+    }
+
+    public JButton getGenerateButton() {
+        return generateButton;
+    }
+
+    public JButton getAcceptButton() {
+        return acceptButton;
     }
 
     private void addUIComponent(JComponent component, String labelText, JPanel panel, GridBagConstraints gbc, int row) {

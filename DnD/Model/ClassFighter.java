@@ -1,12 +1,12 @@
 package DnD.Model;
 
-import DnD.DiceVar;
+import DnD.DX;
 
 public class ClassFighter extends CharacterClass {
     public ClassFighter() {
         name = "Fighter";
 
-        hitPointDie = DiceVar.D10;
+        hitPointDie = DX.D10;
 
         classFeatures.add(new FeaturePerk("Action Surge", "You can push yourself beyond your normal " +
                 "limits for a moment. On your turn, you can take one additional action, except the Magic action." +
