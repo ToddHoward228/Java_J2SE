@@ -18,4 +18,12 @@ public class Bank {
         }
         System.out.println(account);
     }
+
+    public int getAccount() {
+        return account;
+    }
+
+    public void setAccount(int account) {
+        this.account = account;
+    }
 }
