@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/java_j2se_lab10.iml" filepath="$PROJECT_DIR$/.idea/java_j2se_lab10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_j2se_lab10-client/java_j2se_lab10-client.iml" filepath="$PROJECT_DIR$/java_j2se_lab10-client/java_j2se_lab10-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_j2se_lab10-server/java_j2se_lab10-server.iml" filepath="$PROJECT_DIR$/java_j2se_lab10-server/java_j2se_lab10-server.iml" />
+    </modules>
+  </component>
+</project>
