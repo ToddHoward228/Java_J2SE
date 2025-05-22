@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="java_j2se_lab10-client:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="acd3c4e7-abd2-41db-9d26-8e60dd71a460" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/java_j2se_lab10_client_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java_j2se_lab10-client/ConnectInputMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_j2se_lab10-client/ConnectInputMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java_j2se_lab10-client/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_j2se_lab10-client/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java_j2se_lab10-client/ReceiveMessageFromServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java_j2se_lab10-client/ReceiveMessageFromServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConnectInputMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConnectInputMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReceiveMessageFromServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReceiveMessageFromServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_j2se_lab10-server/out/production/java_j2se_lab10-server/ChatServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_j2se_lab10-server/out/production/java_j2se_lab10-server/ChatServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_j2se_lab10-server/out/production/java_j2se_lab10-server/ClientThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_j2se_lab10-server/out/production/java_j2se_lab10-server/ClientThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_j2se_lab10-server/src/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_j2se_lab10-server/src/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_j2se_lab10-server/src/ClientThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_j2se_lab10-server/src/ClientThread.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ToddHoward228&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ToddHoward228/Java_J2SE.git&quot;,
+    &quot;accountId&quot;: &quot;01887e74-bfb2-48d2-a1c1-9b236efc4b19&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2wLiH8VTwGVxNBLaJabN9077JxP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Java/java_j2se_lab10/java_j2se_lab10-client&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Projects/Java/java_j2se_lab10/java_j2se_lab10-client/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="acd3c4e7-abd2-41db-9d26-8e60dd71a460" name="Changes" comment="" />
+      <created>1745827169320</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745827169320</updated>
+      <workItem from="1745827170288" duration="1291000" />
+      <workItem from="1745915828010" duration="2000" />
+      <workItem from="1746085988834" duration="394000" />
+      <workItem from="1746086816735" duration="2558000" />
+      <workItem from="1746094013049" duration="5703000" />
+      <workItem from="1746389896986" duration="5000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

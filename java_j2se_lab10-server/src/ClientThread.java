@@ -5,9 +5,9 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class ClientThread implements Runnable {
-    Socket clientSocket;
-    ChatServer server;
-    int clientID;
+    private final Socket clientSocket;
+    private final ChatServer server;
+    private final int clientID;
 
     public ClientThread(Socket clientSocket, ChatServer server, int clientID) {
         this.clientSocket = clientSocket;
@@ -17,28 +17,27 @@ public class ClientThread implements Runnable {
 
     @Override
     public void run() {
-        try {
-            BufferedReader inFromClient = new BufferedReader((new InputStreamReader(clientSocket.getInputStream())));
-
+        try (
+                BufferedReader inFromClient = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                PrintWriter outToClient = new PrintWriter(clientSocket.getOutputStream(), true)
+        ) {
             System.out.println("Client " + clientID + " connected");
+            outToClient.println("Your ID is: " + clientID);
 
-            new PrintWriter(clientSocket.getOutputStream(), true).println("Client " + clientID + '.');
-            String clientMessage = null;
-
-            while (true) {
-
-                clientMessage = inFromClient.readLine();
-
-                if (!"exit".equals(clientMessage)) {
-                    System.out.println("Message received: " + clientMessage);
-
-                    server.sendMessageForAllClients(clientID, clientMessage);
-                } else {
+            String clientMessage;
+            while ((clientMessage = inFromClient.readLine()) != null) {
+                if ("exit".equalsIgnoreCase(clientMessage)) {
+                    System.out.println("Client " + clientID + " disconnected");
                     break;
                 }
+                System.out.println("Message from Client " + clientID + ": " + clientMessage);
+                server.sendMessageForAllClients(clientID, clientMessage);
             }
+
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Client " + clientID + " error: " + e.getMessage());
+        } finally {
+            server.removeClient(clientID);
         }
     }
 }
