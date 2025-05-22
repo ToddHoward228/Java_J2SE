@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JSP Page</title>
+    <style>
+        body {
+            font-family: "Arno Pro", sans-serif;
+            background-image: url('./images/background-2.jpg');
+            background-size: cover;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #page {
+            width: 400px;
+            margin: auto;
+        }
+
+
+        table {
+            width: 100%;
+            margin: auto;
+        }
+
+        input:not([type="submit"]) {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        <h1>Hello World!</h1>
+        <form>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label for="name">Name</label></td>
+                        <td><input id="name" type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="surname">Surname</label></td>
+                        <td><input id="surname" type="text" name="surname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input id="email" type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="send" value="Send">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </form>
+    </div>
+</body>
+<c:if test="${not empty param.send }">
+    <c:set var="id" value="${id+1}" scope="application" />
+
+    <c:if test="${not empty param.name}">
+        <c:set var="name" value="${param.name}" scope="session"></c:set>
+        <p>
+            Name: ${param.name}
+        </p>
+    </c:if>
+
+    <c:if test="${not empty param.surname}">
+        <c:set var="surname" value="${param.surname}" scope="session"></c:set>
+        <p>
+            Surname: ${param.surname}
+        </p>
+    </c:if>
+
+    <c:if test="${not empty param.email}">
+        <c:set var="email" value="${param.email}" scope="session"></c:set>
+        <p>
+            Email: ${param.email}
+        </p>
+    </c:if>
+</c:if>
+</div>
+</body>
+
+</html>
